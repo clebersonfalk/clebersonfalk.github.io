@@ -17,7 +17,11 @@ class App extends Component {
                             <img src={me} className="App-logo" alt="logo" />
                         </div>
                         <h1 className="App-title">Cleberson Falk</h1>
-                        <h2 className="App-subtitle">DESENVOLVEDOR WEB</h2>
+                        <div className="typer-wrapper">
+                            <div className="typer">
+                                <h2 className="App-subtitle">DESENVOLVEDOR WEB</h2>
+                            </div>
+                        </div>
                     </header>
 
                     <nav className="App-nav">

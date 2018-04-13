@@ -101,16 +101,43 @@ html, body, #root, .App {
     font-weight: 600;
 }
 
+.App-header .typer-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.typer-wrapper .typer {
+    line-height: 18px;
+}
+
 .App-header .App-subtitle {
+    animation:
+            typing 3s steps(30, end),
+            blink-caret 0.5s step-end infinite;
+    border-right: 3px solid orange;
     color: #ccc;
-    font-size: 0.9em;
+    font-family: monospace;
+    font-size: 1.2em;
     font-weight: 600;
-    margin: 25px 0 20px 0;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2px 3px 0;
+    white-space: nowrap;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
 }
 
 .App-header:hover .App-subtitle {
@@ -155,45 +182,6 @@ html, body, #root, .App {
 .App a:focus {
     outline: none;
 }
-
-/*.App .App-nav a,*/
-/*.App .App-nav a:not(:last-child):after {*/
-    /*-webkit-transition: all 0.4s ease-in-out;*/
-    /*-moz-transition: all 0.4s ease-in-out;*/
-    /*-ms-transition: all 0.4s ease-in-out;*/
-    /*transition: all 0.4s ease-in-out;*/
-/*}*/
-
-/*.App-nav:hover a:not(:last-child):after {*/
-    /*color: #222;*/
-    /*-webkit-transform: rotate(360deg);*/
-    /*-moz-transform: rotate(360deg);*/
-    /*-ms-transform: rotate(360deg);*/
-    /*transform: rotate(360deg);*/
-/*}*/
-
-
-/*.App-nav a:not(:last-child):after {*/
-    /*color: #a0a0a0;*/
-    /*content: "|";*/
-    /*display: inline-block;*/
-    /*height: 50px;*/
-    /*right: -3px;*/
-    /*position: absolute;*/
-    /*vertical-align: middle;*/
-    /*-webkit-transform: rotate(45deg);*/
-    /*-moz-transform: rotate(45deg);*/
-    /*-ms-transform: rotate(45deg);*/
-    /*transform: rotate(45deg);*/
-/*}*/
-
-/*.App .App-nav a:hover {*/
-    /*background: #4fda63;*/
-/*}*/
-
-/*.App-nav a:last-child {*/
-    /*padding: 0 8px;*/
-/*}*/
 
 .container {
     max-width: 960px;
